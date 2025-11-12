@@ -1,0 +1,22 @@
+ <div class="form-container">
+            <section class="contact-details">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Email:</strong> support@teamwebsite.com</li>
+                    <li><strong>Phone:</strong> +1 123-456-7890</li>
+                    <li><strong>Address:</strong> 123 Visionary Lane, Innovation City</li>
+                </ul>
+            </section>
+        </div>
+		
+		
+		
+		
+		.contact-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-details ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }

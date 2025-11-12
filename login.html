@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Life Line Locator</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Sign in to Life Line Locator</h1>
+    
+    <!-- Traditional login form -->
+    <form action="login.php" method="POST">
+      <input type="text" name="username" placeholder="User Name" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit" class="login-button">Log in</button>
+    </form>
+    <br>
+    
+    <!-- Google Sign-In Button -->
+    <button class="google-button" onclick="signIn()">
+      <img src="logogoogle.png" alt="Google logo">
+      Continue with Google
+    </button>
+    
+    <div class="links">
+      <a href="forgot-password.php">Forgot Password</a>
+    </div>
+    
+    <p class="create-account">
+      No account? <a href="Registration.html">Create one</a>
+    </p>
+  </div>
+
+  <script>
+
+    function signIn() {
+    let oauth2Endpoint = "https://accounts.google.com/o/oauth2/v2/auth";
+
+    // Create a form dynamically
+    let form = document.createElement('form');
+    form.setAttribute('method', 'GET');
+    form.setAttribute('action', oauth2Endpoint);
+
+    // OAuth parameters
+    let params = {
+        "client_id": "660377743847-0upkp4tgsn53ban9ffd7l5ho6u39qg6g.apps.googleusercontent.com",
+        "redirect_uri": "http://127.0.0.1:5500/Home.php", 
+        "response_type": "token",
+        "scope": "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email",
+        "include_granted_scopes": 'true',
+        'state': 'pass-through-value'
+    };
+
+    // Append parameters as hidden input fields
+    for (var p in params) {
+        let input = document.createElement('input');
+        input.setAttribute('type', 'hidden');
+        input.setAttribute('name', p);
+        input.setAttribute('value', params[p]);
+        form.appendChild(input);
+    }
+
+    // Add the form to the body and submit it
+    document.body.appendChild(form);
+    form.submit();
+}
+
+    
+        </script>
+
+  
+</body>
+</html>
+

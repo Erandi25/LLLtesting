@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Request Form</title>
+  <link rel="stylesheet" href="Blooddonate.css">
+</head>
+<body>
+  <div id="bloodrequest" class="form-container">
+    <!-- Back Icon -->
+    <a href="Home.php" class="back-icon" title="Go Back"> <img src="backButton.png" width="20px" height="20px">
+    </a>
+	
+
+    <h2>Blood Request</h2>
+    <form action="Bloodrequest.php" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="patientname">Patient Name</label>
+        <input type="text" id="patientname" name="patientname" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="patientage">Patient Age</label>
+        <input type="text" id="patientage" name="patientage" placeholder="Enter your age"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter contact number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea type="textarea" id="reason" name="reason" required placeholder="Enter your Reason" cols="54" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="bloodGroup">Blood Group</label>
+        <select id="bloodGroup" name="bloodGroup" required>
+            <option value="">Select option</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="nearestHospital">Nearest Hospital</label>
+        <input type="text" id="nearestHospital" name="nearestHospital" required>
+    </div>
+
+    <div class="form-group">
+        <label for="attachment">Medical report that can confirm the reason</label>
+        <input type="file" id="attachment" name="attachment" required>
+    </div>
+
+
+      <div class="button-group">
+        <button type="submit" class="organize-button">submit</button>
+        
+      </div>
+    </form>
+  </div>
+</body>
+</html>

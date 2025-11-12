@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #8B0000;
+    background:#CD1141;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+section nav .social_icon i {
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+section nav .social_icon i:hover {
+    color: #8B0000;
+    cursor: pointer;
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+section .main h1 {
+    font-size: 55px;
+    top: 80px;
+    left: 25px;
+}
+
+section .main h1 span {
+    color: 	#8B0000;
+}
+
+section .main p {
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 125px;
+    left: 25px;
+}
+
+.publish-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.publish-button:hover {
+    background-color: darkred;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.main-content {
+    background-image: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.content-wrapper {
+    text-align: center;
+    color: #fff;
+}
+
+.content-wrapper h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper h1 span {
+    color: 	#8B0000;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px; 
+}
+
+
+.button-container a {
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between the buttons */
+}
+
+
+.donate-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.donate-button:hover {
+    background-color: darkred;
+}
+
+.request-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.request-button:hover {
+    background-color: darkred;
+}
+
+.more-details-container {
+    margin-top: 20px;
+}
+
+.more-details-container a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.more-details-container a:hover {
+    color: 	#8B0000;
+}
+
+/* Footer */
+footer {
+    background-color: #f3f3f3;
+    padding: 40px 0;
+}
+
+footer .footer-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #c7511f;
+}
+
+
+
+
+/* Moving Banner */
+.moving-banner{
+    background-color: #CD1141;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.moving-banner span {
+    font-size: 18px;
+    color: black;
+}

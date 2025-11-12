@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Details</title>
+  <link rel="stylesheet" href="">
+
+
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a154b;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .navbar {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .logo img {
+      height: 150px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .auth-buttons .btn {
+      text-decoration: none;
+      background-color: #711d72;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .auth-buttons .btn:hover {
+      background-color: #4a154b;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      /* Separate logo and text */
+      padding: 20px 40px;
+      background-color: white;
+    }
+
+    .logo img {
+      height: 150px;
+      /* Adjust the logo size */
+      max-width: 100%;
+    }
+
+    .hero-text {
+      flex-grow: 1;
+      /* Allow the text to occupy remaining space */
+      text-align: right;
+      /* Center-align the text */
+    }
+
+    .hero-text h1 {
+      color: #4a154b;
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .hero-text h3 {
+      color: black;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .hero span {
+      color: #e40046;
+    }
+
+    .hero .btn {
+      text-decoration: none;
+      background-color: #970430;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .hero .btn:hover {
+      background-color: #86022a;
+    }
+
+    /*firlst container*/
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      flex-basis: 30%;
+      margin-top: 55px;
+
+    }
+
+    .host-container {
+      width: 600px;
+      margin-left: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      align-items: left;
+      padding: 12px 30px;
+      margin-top: 5px;
+      margin-right: 25px;
+      margin-bottom: 30px;
+
+
+    }
+
+    .host-container2 {
+      width: 600px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      align-items: right;
+      align-items: center;
+      margin-left: auto;
+      padding: 12px 30px;
+      margin-top: 50px;
+
+
+
+
+
+    }
+
+    /*second Container*/
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 30%;
+      margin-top: 55px;
+
+    }
+
+    .host-container {
+      max-width: 600px;
+      margin-left: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      align-items: left;
+      padding: 12px 30px;
+      margin-top: 5px;
+
+
+    }
+
+    .host-container2 {
+      max-width: 600px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      align-items: right;
+      align-items: center;
+      margin-left: auto;
+      padding: 12px 30px;
+      margin-top: 5px;
+
+
+
+
+    }
+
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin: 0;
+      flex-grow: 1;
+      color: #b11b1b;
+    }
+
+    .distance {
+      color: grey;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .address-section,
+    .appointment-section {
+      width: 48%;
+    }
+
+    .address-section h3,
+    .appointment-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .address-section p,
+    .appointment-section p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .directions-btn,
+    .select-btn {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .directions-btn {
+      background-color: #183657;
+      color: white;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      padding-inline: 1.25rem;
+      background-color: rgb(10, 61, 94);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffff;
+      gap: 10px;
+      font-weight: bold;
+      border: 3px solid #ffffff4d;
+      outline: none;
+      overflow: hidden;
+      font-size: 14px;
+      cursor: pointer;
+      border-width: 5px;
+      width: 160px;
+      height: 40px;
+
+
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      border-color: #fff9;
+    }
+
+    .button:hover .icon {
+      transform: translate(4px);
+    }
+
+    .button:hover::before {
+      animation: shine 1.5s ease-out infinite;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-image: linear-gradient(120deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0) 70%);
+      top: 0;
+      left: -100px;
+      opacity: 0.6;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100px;
+      }
+
+      60% {
+        left: 100%;
+      }
+
+      to {
+        left: 100%;
+      }
+    }
+
+
+    .select-btn {
+      background-color: #970430;
+      color: white;
+      margin-left: 60px;
+      width: 90px;
+
+    }
+
+    /* Moving Banner */
+    .moving-banner {
+      background-color: #4a154b;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .moving-banner span {
+      font-size: 18px;
+      color: white;
+    }
+
+    /* Footer */
+    /* Footer Styles */
+    footer {
+      background-color: #4a154b;
+      /* Dark background */
+      color: white;
+      /* White text */
+      padding: 20px 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* Four equal columns */
+      gap: 20px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer-column ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .call-number {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #970430;
+      /* Highlighted number color */
+    }
+
+    .social-icons a {
+      color: white;
+      margin-right: 10px;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #970430;
+    }
+
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #4a154b;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8em;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="hospital.html">HOSPITAL</a></li>
+          <li><a href="camp.php">CAMP</a></li>
+          <li><a href="Aboutusnew.html">ABOUT</a></li>
+          <li><a href="Contactus.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="logo">
+        <a href="Home.php">
+          <img src="LOGO NEW.png" alt="Life Line Locator Logo"></a>
+      </div>
+      <div class="hero-text">
+        <h1>LIFE LINE LOCATOR</h1>
+        <h3>Your trusted platform for blood and organ donation.</h3>
+        <a href="Aboutusnew.html" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="host-container">
+        <div class="header">
+          <img src="blood-icon.png" alt="Blood Icon" class="icon">
+          <h1>District General Hospital, <br> Gampaha</h1>
+          <p class="distance">&nbsp;&nbsp;5 km</p>
+        </div>
+        <div class="content">
+          <div class="address-section">
+            <h3>Location address</h3>
+            <p> 32R2+G7W, A33,<br> Gampaha</p>
+            <button class="directions-btn" id="directions-btn">
+              Directions
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C11.45 2 11 2.45 11 3V11H3C2.45 11 2 11.45 2 12C2 12.55 2.45 13 3 13H11V21C11 21.55 11.45 22 12 22C12.55 22 13 21.55 13 21V13H21C21.55 13 22 12.55 22 12C22 11.45 21.55 11 21 11H13V3C13 2.45 12.55 2 12 2Z"></path>
+              </svg>
+          </button>
+      
+          <script>
+              document.getElementById('directions-btn').addEventListener('click', function () {
+                  // Set your destination latitude and longitude
+                  const destinationLat = 37.7749; // Example: San Francisco latitude
+                  const destinationLng = -122.4194; // Example: San Francisco longitude
+      
+                  // Construct Google Maps link
+                  const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}`;
+      
+                  // Open the link in a new tab
+                  window.open(googleMapsLink, '_blank');
+              });
+          </script>
+          </div>
+          <div class="appointment-section">
+            <h3>Next Available Appointment</h3>
+            <p>(Click to view other available dates)</p>
+            <select class="appointment-date">
+              <option value="2024-11-20">Wednesday, dec. 20, 2024</option>
+              <!-- Add more dates as needed -->
+            </select>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="host-container">
+        <div class="header">
+          <img src="blood-icon.png" alt="Blood Icon" class="icon">
+          <h1>District General Hospital ,Negombo</h1>
+          <p class="distance">&nbsp;&nbsp; 36 km</p>
+        </div>
+        <div class="content">
+          <div class="address-section">
+            <h3>Location address</h3>
+            <p>6R7X+2CC, A3, Negombo 11500 <br>Negombo</p>
+            <button class="directions-btn" id="directions-btn">
+              Directions
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C11.45 2 11 2.45 11 3V11H3C2.45 11 2 11.45 2 12C2 12.55 2.45 13 3 13H11V21C11 21.55 11.45 22 12 22C12.55 22 13 21.55 13 21V13H21C21.55 13 22 12.55 22 12C22 11.45 21.55 11 21 11H13V3C13 2.45 12.55 2 12 2Z"></path>
+              </svg>
+          </button>
+      
+          <script>
+              document.getElementById('directions-btn').addEventListener('click', function () {
+                  // Set your destination latitude and longitude
+                  const destinationLat = 37.7749; // Example: San Francisco latitude
+                  const destinationLng = -122.4194; // Example: San Francisco longitude
+      
+                  // Construct Google Maps link
+                  const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}`;
+      
+                  // Open the link in a new tab
+                  window.open(googleMapsLink, '_blank');
+              });
+          </script>
+          </div>
+          <div class="appointment-section">
+            <h3>Next Available Appointment</h3>
+            <p>(Click to view other available dates)</p>
+            <select class="appointment-date">
+              <option value="2024-11-29">Friday, Nov. 29, 2024</option>
+              <!-- Add more dates as needed -->
+            </select>
+            <br>
+
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+
+      <!--second container -->
+
+      <div class="container">
+
+
+        <div class="host-container">
+          <div class="header">
+            <img src="blood-icon.png" alt="Blood Icon" class="icon">
+            <h1>Colombo South Teaching Hospital,<br>Kalubowila</h1>
+            <p class="distance">45 km</p>
+          </div>
+          <div class="content">
+            <div class="address-section">
+              <h3>Location address</h3>
+              <p>B229 Hospital Rd, <br>Dehiwala-Mount Lavinia</p>
+              <button class="directions-btn" id="directions-btn">
+                Directions
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C11.45 2 11 2.45 11 3V11H3C2.45 11 2 11.45 2 12C2 12.55 2.45 13 3 13H11V21C11 21.55 11.45 22 12 22C12.55 22 13 21.55 13 21V13H21C21.55 13 22 12.55 22 12C22 11.45 21.55 11 21 11H13V3C13 2.45 12.55 2 12 2Z"></path>
+                </svg>
+            </button>
+        
+            <script>
+                document.getElementById('directions-btn').addEventListener('click', function () {
+                    // Set your destination latitude and longitude
+                    const destinationLat = 37.7749; // Example: San Francisco latitude
+                    const destinationLng = -122.4194; // Example: San Francisco longitude
+        
+                    // Construct Google Maps link
+                    const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}`;
+        
+                    // Open the link in a new tab
+                    window.open(googleMapsLink, '_blank');
+                });
+            </script>
+            </div>
+            <div class="appointment-section">
+              <h3>Next Available Appointment</h3>
+              <p>(Click to view other available dates)</p>
+              <select class="appointment-date">
+                <option value="2024-12-12">Thursday, dec. 12, 2024</option>
+                <!-- Add more dates as needed -->
+              </select>
+              <br>
+
+              <button class="select-btn">Select</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="host-container">
+          <div class="header">
+            <img src="blood-icon.png" alt="Blood Icon" class="icon">
+            <h1>National Hospital Kandy, Blood Services</h1>
+            <p class="distance">&nbsp;&nbsp;85 km</p>
+          </div>
+          <div class="content">
+            <div class="address-section">
+              <h3>Location address</h3>
+              <p>William Gopallawa Mawatha, <br>Kandy</p>
+              <button class="directions-btn" id="directions-btn">
+                Directions
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C11.45 2 11 2.45 11 3V11H3C2.45 11 2 11.45 2 12C2 12.55 2.45 13 3 13H11V21C11 21.55 11.45 22 12 22C12.55 22 13 21.55 13 21V13H21C21.55 13 22 12.55 22 12C22 11.45 21.55 11 21 11H13V3C13 2.45 12.55 2 12 2Z"></path>
+                </svg>
+            </button>
+        
+            <script>
+                document.getElementById('directions-btn').addEventListener('click', function () {
+                    // Set your destination latitude and longitude
+                    const destinationLat = 37.7749; // Example: San Francisco latitude
+                    const destinationLng = -122.4194; // Example: San Francisco longitude
+        
+                    // Construct Google Maps link
+                    const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}`;
+        
+                    // Open the link in a new tab
+                    window.open(googleMapsLink, '_blank');
+                });
+            </script>
+            </div>
+            <div class="appointment-section">
+              <h3>Next Available Appointment</h3>
+              <p>(Click to view other available dates)</p>
+              <select class="appointment-date">
+                <option value="2024-11-29">Friday, Nov. 29, 2024</option>
+                <!-- Add more dates as needed -->
+              </select>
+              <br>
+
+              <button class="select-btn">Select</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <br><br>
+      <div class="moving-banner">
+        <marquee behavior="scroll" direction="left">
+          <span> One drop of blood you donate saves a life </span>
+        </marquee>
+      </div>
+
+
+
+      <footer>
+        <div class="footer-container">
+          <!-- About Us Section -->
+          <div class="footer-column">
+            <h4>ABOUT US</h4>
+            <ul>
+              <li><a href="Aboutusnew.html">Purpose</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- News & Blog Section -->
+          <div class="footer-column">
+            <h4>NEWS & BLOG</h4>
+            <ul>
+              <li><a href="camp.html">Camps</a></li>
+              <li><a href="hospital.html">Locations</a></li>
+            </ul>
+          </div>
+
+
+          <!-- Resources Section -->
+          <div class="footer-column">
+            <h4>RESOURCES</h4>
+            <ul>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="Blooddonate.html">Blood donate</a></li>
+              <li><a href="Organdonate.html">Organ donate </a></li>
+              <li><a href="Home.php">Rewards Program</a></li>
+              <li><a href="Contactus.html">Contact us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact and Social Links -->
+          <div class="footer-column">
+            <h4>CALL US</h4>
+            <p class="call-number">011 3455434</p>
+            <h4>FOLLOW US</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+              <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://lk.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Copyright © 2024 LifeLineLocator. All Rights Reserved.</p>
+          <p>Terms of use | Privacy policy</p>
+        </div>
+      </footer>
+
+</body>
+
+
+</html>

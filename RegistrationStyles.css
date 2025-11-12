@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+    background-color: #e6e6fa;
+  }
+
+  .form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a154b;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="file"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .submit-button,
+  .cancel-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .submit-button {
+    background-color: #5a005a;
+    color: white;
+  }
+
+  .cancel-button {
+    background-color: #ccc;
+    color: #333;
+  }
+
+  .submit-button:hover {
+    background-color: #730073;
+  }
+
+  .cancel-button:hover {
+    background-color: #b3b3b3;
+  }
+
+  a {
+    color: #4a154b;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

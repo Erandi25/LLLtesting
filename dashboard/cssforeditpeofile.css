@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4a154b;
+    color: white;
+    padding: 10px 20px;
+}
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.auth-buttons .btn {
+    text-decoration: none;
+    background-color: #711d72;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.auth-buttons .btn:hover {
+    background-color: #4a154b;
+}
+
+.button-item {
+    display: flex;
+    text-decoration: none; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    background-color: white;
+    color: #4a154b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(30% - 20px);
+    height: 70px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .button-item a{
+        text-decoration: none;
+        color: #4a154b;
+    }
+  
+  
+  .button-item:hover {
+    background-color: #fdecea;
+    text-decoration: none; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+
+  /* Moving Banner */
+.moving-banner {
+    background-color:#4a154b;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.moving-banner span {
+    font-size: 18px;
+    color: white;
+}
+
+footer {
+    background-color: #4a154b; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.call-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #970430; /* Highlighted number color */
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #970430;
+}
+
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #4a154b;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+

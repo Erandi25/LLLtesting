@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #4a154b;
+    color: white;
+    padding: 10px 20px;
+    
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    flex: 1;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between; /* Separate logo and text */ 
+    padding: 20px 40px;
+    background-color: white;
+}
+
+.logo img {
+    height: 150px; /* Adjust the logo size */
+    max-width: 100%;
+}
+
+.hero-text {
+    flex-grow: 1; /* Allow the text to occupy remaining space */
+    text-align: right; /* Center-align the text */
+}
+
+.hero-text h1 {
+    color: #4a154b;
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text h3 {
+    color: black;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.hero span {
+    color: #e40046;
+}
+
+.hero .btn {
+    text-decoration: none;
+    background-color: #970430;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.hero .btn:hover {
+    background-color: #86022a;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color:  #e6e6fa;
+    color: #4a154b;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 20px;
+    padding: 1rem 0;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.sidebar ul li {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: white;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 10px;
+
+}
+.text{
+    margin: 20px;
+    
+}
+.h1{
+    color: #4a154b;
+    font-weight: bold;
+    
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4a154b;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.card a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Moving Banner */
+.moving-banner {
+    background-color: #4a154b;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.moving-banner span {
+    font-size: 18px;
+    color: white;
+}
+
+/* Footer */
+/* Footer Styles */
+footer {
+    background-color: #4a154b; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.call-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #970430; /* Highlighted number color */
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #970430;
+}
+
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #4a154b;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

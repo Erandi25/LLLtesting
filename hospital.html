@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="hospital.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .moving-banner {
+            background-color: #4a154b;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .moving-banner span {
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="hospital.html">HOSPITAL</a></li>
+                    <li><a href="camp.php">CAMP</a></li>
+                    <li><a href="Aboutusnew.html">ABOUT</a></li>
+                    <li><a href="Contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="reg-button">
+                <a href="hospital_registration.php" class="btn">Hospital Registration</a>
+                <a href="login_dbNew.php" class="btn">Dashboard</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="logo">
+                <a href="Home.php">
+                    <img src="LOGO NEW.png" alt="Life Line Locator Logo"></a>
+            </div>
+            <div class="hero-text">
+                <h1>LIFE LINE LOCATOR</h1>
+                <h3>Your trusted platform for blood and organ donation.</h3>
+                <a href="Aboutusnew.html" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="banner-container">
+                <div class="banner">
+                    <img src="banner-1.jpg" alt="Banner Image 1">
+                    <img src="banner-2.jpg" alt="Banner Image 2">
+                    <img src="banner-3.jpg" alt="Banner Image 3">
+
+                </div>
+            </div>
+
+            <section class="search-section">
+                <br>
+                <br>
+                <h2><u>Find a nearest hospital to book an appointment</u></h2>
+                <br>
+                <div class="search-bar">
+                    <input type="text" id="location" placeholder="Enter a Hospital Name">
+                    &nbsp;
+                    <button onclick="searchHospital()">Search</button>
+                </div>
+
+                <div style="height: 50px"> </div>
+
+                <div id="hospital-list">
+                    <div class="icon-buttons">
+                        <a href="host_details_col.html" class="colombo-button">
+                            <div class="icon-button">
+                                <img src="hospital_icon.jpg" alt="Hospital Icon"><br>
+                                <span>Colombo Hospital</span>
+                            </div>
+                        </a>
+                        <a href="host_details_gam.html" class="gampaha-button">
+                            <div class="icon-button">
+                                <img src="hospital_icon.jpg" alt="Hospital Icon"><br>
+                                <span>Gampaha Hospital</span>
+                            </div>
+                        </a>
+                        <a href="host_details_karapitiya.html" class="karapitiya-button">
+                            <div class="icon-button">
+                                <img src="hospital_icon.jpg" alt="Hospital Icon"><br>
+                                <span>Karapitiya Hospital</span>
+                            </div>
+                        </a>
+                        <a href="host_details_negombo.html" class="Negombo-button">
+                            <div class="icon-button">
+                                <img src="hospital_icon.jpg" alt="Hospital Icon"><br>
+                                <span>Negombo Hospital</span>
+                            </div>
+                        </a>
+                        <a href="host_details_kan.html" class="kandy-button">
+                            <div class="icon-button">
+                                <img src="hospital_icon.jpg" alt="Hospital Icon"><br>
+                                <span>Kandy Hospital</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+
+
+                
+                function searchHospital() {
+                    const input = document.getElementById("location").value.toLowerCase();
+                    const hospitals = document.querySelectorAll(".icon-button");
+                    let found = false;
+
+                    hospitals.forEach((hospital) => {
+                        const hospitalName = hospital.textContent.toLowerCase();
+                        if (hospitalName.includes(input)) {
+                            hospital.parentElement.style.display = "block"; // Show matching hospital
+                            found = true;
+                        } else {
+                            hospital.parentElement.style.display = "none"; // Hide non-matching hospitals
+                        }
+                    });
+
+                    if (!found) {
+                        document.getElementById("hospital-list").innerHTML = `
+                            <p style="text-align: center; color: red;">No matching hospitals found.</p>
+                        `;
+                    }
+                }
+            </script>
+
+        </div>
+
+
+        <div class="moving-banner">
+            <marquee behavior="scroll" direction="left">
+                <span> One drop of blood you donate saves a life </span>
+            </marquee>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <!-- About Us Section -->
+                <div class="footer-column">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="Aboutusnew.html">Purpose</a></li>
+                        <li><a href="Privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- News & Blog Section -->
+                <div class="footer-column">
+                    <h4>NEWS & BLOG</h4>
+                    <ul>
+                        <li><a href="camp.html">Camps</a></li>
+                        <li><a href="hospital.html">Locations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Section -->
+                <div class="footer-column">
+                    <h4>RESOURCES</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="Blooddonate.html">Blood donate</a></li>
+                        <li><a href="Oragandonate.html">Organ donate </a></li>
+                        <li><a href="Home.php">Rewards Program</a></li>
+                        <li><a href="Contactus.html">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact and Social Links -->
+                <div class="footer-column">
+                    <h4>CALL US</h4>
+                    <p class="call-number">011 3455434</p>
+                    <h4>FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://lk.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2024 LifeLineLocator. All Rights Reserved.</p>
+                <p>Terms of use | Privacy policy</p>
+            </div>
+        </footer>
+</body>
+
+</html>

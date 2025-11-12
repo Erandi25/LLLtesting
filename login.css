@@ -1,0 +1,144 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6e6fa;
+  }
+  
+  .form-container {
+    align-items: center;
+    width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .auth-buttons .btn {
+    text-decoration: none;
+    background-color: #711d72;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: center;
+}
+.auth-buttons .btn:hover {
+    background-color: #4a154b;
+}
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a154b;
+  }
+  
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .google-button img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
+  .google-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .or-divider {
+    margin: 15px 0;
+    font-size: 10px;
+    color: #757575;
+  }
+  
+  form input {
+    display: block;
+    width: 93%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    outline: none;
+  }
+  
+  form input:focus {
+    border-color: #000;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #970430;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #86022a;
+  }
+  
+  .links {
+    margin: 15px 0;
+  }
+  
+  .links a {
+    display: block;
+    font-size: 12px;
+    color: #0073e6;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .create-account {
+    font-size: 12px;
+    color: #757575;
+  }
+  
+  .create-account a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+  }
+  

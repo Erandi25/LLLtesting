@@ -1,0 +1,99 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6e6fa;
+  }
+  
+  /* Form Container */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a154b;
+  }
+  
+  
+  /* Back Icon */
+
+
+.back-icon:hover {
+  background-color: #f2f2f2;
+  color: #730073;
+  text-decoration: underline;
+}
+
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .organize-button {
+    background-color: #5a005a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  .cancel-button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin-left: 5px;
+  }
+  
+  /* Button Hover Effects */
+  .organize-button:hover {
+    background-color: #730073;
+  }
+  
+ 

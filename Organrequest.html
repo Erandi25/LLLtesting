@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organ Request Form</title>
+  <link rel="stylesheet" href="Organrequest.css">
+</head>
+<body>
+  <div id="oraganrequest" class="form-container">
+    <!-- Back Icon -->
+    <a href="Home.php" class="back-icon" title="Go Back"> <img src="backButton.png" width="20px" height="20px">
+    </a>
+	
+
+    <h2>Organ Request</h2>
+    <form action="Organrequest.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="patientname">Patient Name</label>
+        <input type="text" id="patientname" name="patientname" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="patientage">Patient Age</label>
+        <input type="text" id="patientage" name="patientage" placeholder="Enter your age"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter contact number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea type="textarea" id="reason" name="reason" required placeholder="Enter your Reason" cols="54" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="organType">Organ Type</label>
+        <select id="organType" name="organtype" required>
+            <option value="">Select option</option>
+            <option value="Kidney">Kidney</option>
+            <option value="Liver (portion)">Liver (portion)</option>
+            <option value="Lung (portion)">Lung (portion)</option>
+            <option value="Pancreas (portion)">Pancreas (portion)</option>
+            <option value="Intestine (portion)">Intestine (portion)</option>
+            <option value="Heart">Heart</option>
+            <option value="Lungs">Lungs</option>
+            <option value="Liver">Liver</option>
+            <option value="Kidneys">Kidneys</option>
+            <option value="Pancreas">Pancreas</option>
+            <option value="Intestines">Intestines</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="nearestHospital">Nearest Hospital</label>
+        <input type="text" id="nearestHospital" name="nearestHospital" required>
+    </div>
+
+    <div class="form-group">
+        <label for="attachment">Medical report that can confirm the need of the organ</label>
+        <input type="file" id="attachment" name="attachment" required>
+    </div>
+
+
+      <div class="button-group">
+        <button type="submit" class="organize-button">submit</button>
+        
+      </div>
+    </form>
+  </div>
+</body>
+</html>
